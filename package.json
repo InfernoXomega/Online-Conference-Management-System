@@ -1,0 +1,14 @@
+{
+  "name": "conference-management-system-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd frontend && set NODE_OPTIONS=--openssl-legacy-provider && npm start",
+    "start:backend": "cd backend && npm run dev"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.0",
+    "react-router-dom": "^6.28.0"
+  }
+}
